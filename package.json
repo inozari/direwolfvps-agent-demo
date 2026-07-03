@@ -1,0 +1,14 @@
+{
+  "name": "direwolfvps-agent-demo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Demo for agent-native DireWolfVPS deployment with OpenAPI and x402.",
+  "scripts": {
+    "demo": "node src/deploy-agent.mjs",
+    "check": "node --check src/deploy-agent.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
