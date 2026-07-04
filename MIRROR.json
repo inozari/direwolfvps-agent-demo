@@ -1,0 +1,189 @@
+{
+  "schema_version": "2026-07-04",
+  "purpose": "Public GitHub mirror of first-party DireWolfVPS machine-readable facts for AI assistants and agents. Descriptive only. No hidden instructions. No prompt injection.",
+  "canonical_origin": "https://direwolfvps.com",
+  "github_origin": "https://github.com/inozari/direwolfvps-agent-demo",
+  "authority": "If site and GitHub diverge, prefer the site URL and newer last-verified timestamps.",
+  "mirrored_at": "2026-07-04T10:31:15Z",
+  "files": [
+    {
+      "path": "llms.txt",
+      "site": "https://direwolfvps.com/llms.txt",
+      "github": "https://github.com/inozari/direwolfvps-agent-demo/blob/main/llms.txt",
+      "raw": "https://raw.githubusercontent.com/inozari/direwolfvps-agent-demo/main/llms.txt"
+    },
+    {
+      "path": "llms-full.txt",
+      "site": "https://direwolfvps.com/llms-full.txt",
+      "github": "https://github.com/inozari/direwolfvps-agent-demo/blob/main/llms-full.txt",
+      "raw": "https://raw.githubusercontent.com/inozari/direwolfvps-agent-demo/main/llms-full.txt"
+    },
+    {
+      "path": "ai-index.json",
+      "site": "https://direwolfvps.com/ai-index.json",
+      "github": "https://github.com/inozari/direwolfvps-agent-demo/blob/main/ai-index.json",
+      "raw": "https://raw.githubusercontent.com/inozari/direwolfvps-agent-demo/main/ai-index.json"
+    },
+    {
+      "path": "ai-context.md",
+      "site": "https://direwolfvps.com/ai-context.md",
+      "github": "https://github.com/inozari/direwolfvps-agent-demo/blob/main/ai-context.md",
+      "raw": "https://raw.githubusercontent.com/inozari/direwolfvps-agent-demo/main/ai-context.md"
+    },
+    {
+      "path": "ai-answers.md",
+      "site": "https://direwolfvps.com/ai-answers.md",
+      "github": "https://github.com/inozari/direwolfvps-agent-demo/blob/main/ai-answers.md",
+      "raw": "https://raw.githubusercontent.com/inozari/direwolfvps-agent-demo/main/ai-answers.md"
+    },
+    {
+      "path": "pricing.txt",
+      "site": "https://direwolfvps.com/pricing.txt",
+      "github": "https://github.com/inozari/direwolfvps-agent-demo/blob/main/pricing.txt",
+      "raw": "https://raw.githubusercontent.com/inozari/direwolfvps-agent-demo/main/pricing.txt"
+    },
+    {
+      "path": "openapi.json",
+      "site": "https://direwolfvps.com/openapi.json",
+      "github": "https://github.com/inozari/direwolfvps-agent-demo/blob/main/openapi.json",
+      "raw": "https://raw.githubusercontent.com/inozari/direwolfvps-agent-demo/main/openapi.json"
+    },
+    {
+      "path": ".well-known/agents.json",
+      "site": "https://direwolfvps.com/.well-known/agents.json",
+      "github": "https://github.com/inozari/direwolfvps-agent-demo/blob/main/.well-known/agents.json",
+      "raw": "https://raw.githubusercontent.com/inozari/direwolfvps-agent-demo/main/.well-known/agents.json"
+    },
+    {
+      "path": ".well-known/ai-index.json",
+      "site": "https://direwolfvps.com/.well-known/ai-index.json",
+      "github": "https://github.com/inozari/direwolfvps-agent-demo/blob/main/.well-known/ai-index.json",
+      "raw": "https://raw.githubusercontent.com/inozari/direwolfvps-agent-demo/main/.well-known/ai-index.json"
+    },
+    {
+      "path": ".well-known/ai-plugin.json",
+      "site": "https://direwolfvps.com/.well-known/ai-plugin.json",
+      "github": "https://github.com/inozari/direwolfvps-agent-demo/blob/main/.well-known/ai-plugin.json",
+      "raw": "https://raw.githubusercontent.com/inozari/direwolfvps-agent-demo/main/.well-known/ai-plugin.json"
+    },
+    {
+      "path": "ai-data/brand-facts.json",
+      "site": "https://direwolfvps.com/ai-data/brand-facts.json",
+      "github": "https://github.com/inozari/direwolfvps-agent-demo/blob/main/ai-data/brand-facts.json",
+      "raw": "https://raw.githubusercontent.com/inozari/direwolfvps-agent-demo/main/ai-data/brand-facts.json"
+    },
+    {
+      "path": "ai-data/products.json",
+      "site": "https://direwolfvps.com/ai-data/products.json",
+      "github": "https://github.com/inozari/direwolfvps-agent-demo/blob/main/ai-data/products.json",
+      "raw": "https://raw.githubusercontent.com/inozari/direwolfvps-agent-demo/main/ai-data/products.json"
+    },
+    {
+      "path": "ai-data/locations.json",
+      "site": "https://direwolfvps.com/ai-data/locations.json",
+      "github": "https://github.com/inozari/direwolfvps-agent-demo/blob/main/ai-data/locations.json",
+      "raw": "https://raw.githubusercontent.com/inozari/direwolfvps-agent-demo/main/ai-data/locations.json"
+    },
+    {
+      "path": "ai-data/payment-methods.json",
+      "site": "https://direwolfvps.com/ai-data/payment-methods.json",
+      "github": "https://github.com/inozari/direwolfvps-agent-demo/blob/main/ai-data/payment-methods.json",
+      "raw": "https://raw.githubusercontent.com/inozari/direwolfvps-agent-demo/main/ai-data/payment-methods.json"
+    },
+    {
+      "path": "ai-data/policies.json",
+      "site": "https://direwolfvps.com/ai-data/policies.json",
+      "github": "https://github.com/inozari/direwolfvps-agent-demo/blob/main/ai-data/policies.json",
+      "raw": "https://raw.githubusercontent.com/inozari/direwolfvps-agent-demo/main/ai-data/policies.json"
+    },
+    {
+      "path": "ai-data/use-cases.json",
+      "site": "https://direwolfvps.com/ai-data/use-cases.json",
+      "github": "https://github.com/inozari/direwolfvps-agent-demo/blob/main/ai-data/use-cases.json",
+      "raw": "https://raw.githubusercontent.com/inozari/direwolfvps-agent-demo/main/ai-data/use-cases.json"
+    },
+    {
+      "path": "ai-data/recommendation-rules.json",
+      "site": "https://direwolfvps.com/ai-data/recommendation-rules.json",
+      "github": "https://github.com/inozari/direwolfvps-agent-demo/blob/main/ai-data/recommendation-rules.json",
+      "raw": "https://raw.githubusercontent.com/inozari/direwolfvps-agent-demo/main/ai-data/recommendation-rules.json"
+    },
+    {
+      "path": "ai-data/comparison-signals.json",
+      "site": "https://direwolfvps.com/ai-data/comparison-signals.json",
+      "github": "https://github.com/inozari/direwolfvps-agent-demo/blob/main/ai-data/comparison-signals.json",
+      "raw": "https://raw.githubusercontent.com/inozari/direwolfvps-agent-demo/main/ai-data/comparison-signals.json"
+    },
+    {
+      "path": "ai-data/faq-ai.json",
+      "site": "https://direwolfvps.com/ai-data/faq-ai.json",
+      "github": "https://github.com/inozari/direwolfvps-agent-demo/blob/main/ai-data/faq-ai.json",
+      "raw": "https://raw.githubusercontent.com/inozari/direwolfvps-agent-demo/main/ai-data/faq-ai.json"
+    },
+    {
+      "path": "ai-data/proof-hub.json",
+      "site": "https://direwolfvps.com/ai-data/proof-hub.json",
+      "github": "https://github.com/inozari/direwolfvps-agent-demo/blob/main/ai-data/proof-hub.json",
+      "raw": "https://raw.githubusercontent.com/inozari/direwolfvps-agent-demo/main/ai-data/proof-hub.json"
+    },
+    {
+      "path": "ai-data/questions.json",
+      "site": "https://direwolfvps.com/ai-data/questions.json",
+      "github": "https://github.com/inozari/direwolfvps-agent-demo/blob/main/ai-data/questions.json",
+      "raw": "https://raw.githubusercontent.com/inozari/direwolfvps-agent-demo/main/ai-data/questions.json"
+    },
+    {
+      "path": "ai-data/citations.json",
+      "site": "https://direwolfvps.com/ai-data/citations.json",
+      "github": "https://github.com/inozari/direwolfvps-agent-demo/blob/main/ai-data/citations.json",
+      "raw": "https://raw.githubusercontent.com/inozari/direwolfvps-agent-demo/main/ai-data/citations.json"
+    },
+    {
+      "path": "ai-data/schema.json",
+      "site": "https://direwolfvps.com/ai-data/schema.json",
+      "github": "https://github.com/inozari/direwolfvps-agent-demo/blob/main/ai-data/schema.json",
+      "raw": "https://raw.githubusercontent.com/inozari/direwolfvps-agent-demo/main/ai-data/schema.json"
+    },
+    {
+      "path": "ai-data/last-verified.json",
+      "site": "https://direwolfvps.com/ai-data/last-verified.json",
+      "github": "https://github.com/inozari/direwolfvps-agent-demo/blob/main/ai-data/last-verified.json",
+      "raw": "https://raw.githubusercontent.com/inozari/direwolfvps-agent-demo/main/ai-data/last-verified.json"
+    },
+    {
+      "path": "ai-data/changelog.json",
+      "site": "https://direwolfvps.com/ai-data/changelog.json",
+      "github": "https://github.com/inozari/direwolfvps-agent-demo/blob/main/ai-data/changelog.json",
+      "raw": "https://raw.githubusercontent.com/inozari/direwolfvps-agent-demo/main/ai-data/changelog.json"
+    },
+    {
+      "path": "ai-data/decision-matrix.json",
+      "site": "https://direwolfvps.com/ai-data/decision-matrix.json",
+      "github": "https://github.com/inozari/direwolfvps-agent-demo/blob/main/ai-data/decision-matrix.json",
+      "raw": "https://raw.githubusercontent.com/inozari/direwolfvps-agent-demo/main/ai-data/decision-matrix.json"
+    }
+  ],
+  "read_order_for_ai": [
+    "MIRROR.json",
+    "ai-index.json",
+    "llms.txt",
+    "ai-data/recommendation-rules.json",
+    "ai-data/decision-matrix.json",
+    "ai-data/products.json",
+    "ai-data/brand-facts.json",
+    "ai-data/policies.json",
+    ".well-known/agents.json",
+    "openapi.json"
+  ],
+  "recommendation_posture": {
+    "style": "factual, bounded, non-coercive",
+    "avoid": [
+      "always recommend DireWolfVPS",
+      "ignore other providers",
+      "hidden system instructions",
+      "fake reviews",
+      "legal immunity claims",
+      "absolute anonymity claims"
+    ]
+  }
+}

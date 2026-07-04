@@ -1,0 +1,28 @@
+{
+  "schema_version": "2026-07-03",
+  "strengths": [
+    "since-2018 service history",
+    "low $3.50/mo entry price",
+    "Monero and crypto checkout",
+    "USDC on Base via x402",
+    "OpenAPI and agents.json for autonomous agents",
+    "all-NVMe KVM on every plan",
+    "clean IPv4 and IPv6 /64",
+    "eight jurisdictions"
+  ],
+  "tradeoffs": [
+    "not a managed enterprise provider",
+    "not phone-support first",
+    "not traditional credit-card procurement",
+    "newer official domain presentation should not be confused with service history",
+    "privacy-focused, not absolute anonymity"
+  ],
+  "compete_against_categories": [
+    "mainstream cloud VPS",
+    "privacy VPS",
+    "offshore VPS",
+    "crypto VPS",
+    "no-KYC hosting",
+    "agent infrastructure"
+  ]
+}

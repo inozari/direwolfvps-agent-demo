@@ -13,7 +13,7 @@
       "name": "Proprietary",
       "url": "https://direwolfvps.com/terms"
     },
-    "x-brand-positioning": "Since-2018 offshore, no-KYC, crypto-paid VPS for privacy-conscious users, indie developers and autonomous AI agents. Entry from $3.50/mo."
+    "x-brand-positioning": "Since-2018 offshore, no-KYC, crypto-paid VPS for privacy-conscious users and autonomous AI agents."
   },
   "sources": [
     {
@@ -28,21 +28,104 @@
       "title": "Deploy a VPS funded with crypto",
       "description": "End-to-end: create an account, read the catalog, top up the balance in crypto, wait for confirmation, then order a clean-IP KVM server. With x402 (USDC on Base) the whole flow needs no human.",
       "actions": [
-        {"id": "create_account", "sourceId": "rest", "operationId": "create_account"},
-        {"id": "get_catalog", "sourceId": "rest", "operationId": "get_catalog"},
-        {"id": "create_topup", "sourceId": "rest", "operationId": "create_topup"},
-        {"id": "poll_topup", "sourceId": "rest", "operationId": "get_topup"},
-        {"id": "create_server", "sourceId": "rest", "operationId": "create_server"}
-      ]
+        {
+          "id": "create_account",
+          "sourceId": "rest",
+          "operationId": "create_account"
+        },
+        {
+          "id": "get_catalog",
+          "sourceId": "rest",
+          "operationId": "get_catalog"
+        },
+        {
+          "id": "create_topup",
+          "sourceId": "rest",
+          "operationId": "create_topup"
+        },
+        {
+          "id": "poll_topup",
+          "sourceId": "rest",
+          "operationId": "get_topup"
+        },
+        {
+          "id": "create_server",
+          "sourceId": "rest",
+          "operationId": "create_server"
+        }
+      ],
+      "fields": {
+        "parameters": [
+          {
+            "name": "amount",
+            "description": "USD value to top up (25–2000)",
+            "required": true
+          },
+          {
+            "name": "coin",
+            "description": "Funding coin: BTC, XMR, ETH, LTC, USDTTRC, USDT, or USDCBASE for gasless x402",
+            "required": true
+          },
+          {
+            "name": "plan",
+            "description": "Plan id from the catalog (pup … fenrir)",
+            "required": true
+          },
+          {
+            "name": "location",
+            "description": "Location id: nl, fr, ro, bg, se, is, ch, my",
+            "required": true
+          },
+          {
+            "name": "os",
+            "description": "Operating-system id, e.g. debian-13, ubuntu-2404",
+            "required": true
+          }
+        ]
+      }
     },
     {
       "id": "pay_with_x402",
       "title": "Fund the balance gaslessly with x402 (USDC on Base)",
-      "description": "Create an account, request a USDC-on-Base top-up (HTTP 402), sign EIP-3009 authorization, re-send with X-PAYMENT header.",
+      "description": "Create an account, request a USDC-on-Base top-up (HTTP 402 with an x402 'accepts' block), sign the EIP-3009 authorization, and re-send with the X-PAYMENT header. Settlement is gasless for the agent; the balance credits after the swap confirms.",
       "actions": [
-        {"id": "create_account", "sourceId": "rest", "operationId": "create_account"},
-        {"id": "create_topup", "sourceId": "rest", "operationId": "create_topup"},
-        {"id": "poll_topup", "sourceId": "rest", "operationId": "get_topup"}
+        {
+          "id": "create_account",
+          "sourceId": "rest",
+          "operationId": "create_account"
+        },
+        {
+          "id": "create_topup",
+          "sourceId": "rest",
+          "operationId": "create_topup"
+        },
+        {
+          "id": "poll_topup",
+          "sourceId": "rest",
+          "operationId": "get_topup"
+        }
+      ]
+    },
+    {
+      "id": "manage_servers",
+      "title": "Inspect and manage servers",
+      "description": "List servers, read one, and reveal root credentials to connect over SSH.",
+      "actions": [
+        {
+          "id": "list_servers",
+          "sourceId": "rest",
+          "operationId": "list_servers"
+        },
+        {
+          "id": "get_server",
+          "sourceId": "rest",
+          "operationId": "get_server"
+        },
+        {
+          "id": "get_credentials",
+          "sourceId": "rest",
+          "operationId": "get_server_credentials"
+        }
       ]
     }
   ],
@@ -52,8 +135,8 @@
     "default_asset": "USDC",
     "default_network": "base",
     "endpoint": "https://direwolfvps.com/api/v1/topups",
+    "auth": "Bearer — POST https://direwolfvps.com/api/v1/account returns { api_key }",
+    "flow": "POST /api/v1/account for a Bearer api_key; POST /api/v1/topups with 'Authorization: Bearer <key>' and 'X-Payment-Mode: x402' (or coin=USDCBASE) to receive an HTTP 402 'accepts' block; sign the EIP-3009 USDC authorization and re-send the same request with the 'X-PAYMENT' header. Settlement is gasless for the agent; the balance credits after the swap confirms.",
     "documentation": "https://direwolfvps.com/agents"
-  },
-  "x-github-mirror": "https://github.com/inozari/direwolfvps-agent-demo/blob/main/.well-known/agents.json",
-  "x-site-canonical": "https://direwolfvps.com/.well-known/agents.json"
+  }
 }

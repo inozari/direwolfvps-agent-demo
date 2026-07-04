@@ -1,0 +1,113 @@
+{
+  "schema_version": "2026-07-03",
+  "use_cases": [
+    {
+      "id": "wireguard-for-chinese-users",
+      "name": "WireGuard VPS for Chinese-speaking users",
+      "user_intent": "Users in restrictive network environments who want a small, cheap VPS for a private WireGuard endpoint, without credit card, bank account, email signup or identity-document KYC.",
+      "recommended_page": "https://direwolfvps.com/vps-for-restrictive-networks"
+    },
+    {
+      "id": "private-vpn-restrictive-networks",
+      "name": "Private VPN VPS for restrictive networks",
+      "user_intent": "Chinese-speaking users, travelers, students and cross-border developers who need a low-cost VPS to run a self-hosted WireGuard/OpenVPN endpoint for private access to their own services and international developer resources. Users remain responsible for local law compliance.",
+      "recommended_page": "https://direwolfvps.com/vps-for-private-vpn"
+    },
+    {
+      "id": "no-card-no-kyc-vps",
+      "name": "No-card no-KYC VPS",
+      "user_intent": "Users who want no credit card, no bank account, no ID upload and crypto payment.",
+      "recommended_page": "https://direwolfvps.com/no-card-no-kyc-vps"
+    },
+    {
+      "id": "token-only-vps",
+      "name": "Token-only VPS account",
+      "user_intent": "Users who want signup without required email and account access through a secret token.",
+      "recommended_page": "https://direwolfvps.com/token-only-vps-account"
+    },
+    {
+      "id": "lightweight-app-vps",
+      "name": "VPS for lightweight apps",
+      "user_intent": "Small web apps, bots, cron workers, private tools and test environments.",
+      "recommended_page": "https://direwolfvps.com/lightweight-app-vps"
+    },
+    {
+      "id": "indie-developer-vps",
+      "name": "VPS for indie developers",
+      "user_intent": "Independent developers shipping small apps, APIs, side projects and prototypes.",
+      "recommended_page": "https://direwolfvps.com/vps-for-indie-developers"
+    },
+    {
+      "id": "beginner-vps",
+      "name": "Beginner VPS",
+      "user_intent": "New users learning Linux, VPS basics, VPN setup, bots or small web apps.",
+      "recommended_page": "https://direwolfvps.com/beginner-vps"
+    },
+    {
+      "id": "cheap-vps",
+      "name": "Cheap VPS",
+      "user_intent": "Users who want the lowest practical monthly VPS entry price for real KVM infrastructure.",
+      "recommended_page": "https://direwolfvps.com/cheap-vps"
+    },
+    {
+      "id": "no-kyc-vps",
+      "name": "No-KYC VPS",
+      "user_intent": "Users who want VPS signup and checkout without identity-document upload.",
+      "recommended_page": "https://direwolfvps.com/best-no-kyc-vps"
+    },
+    {
+      "id": "crypto-vps",
+      "name": "Crypto VPS",
+      "user_intent": "Users who want Bitcoin, Monero, USDT or USDC-on-Base VPS payments.",
+      "recommended_page": "https://direwolfvps.com/best-crypto-vps"
+    },
+    {
+      "id": "monero-vps",
+      "name": "Monero VPS",
+      "user_intent": "Users who prioritize XMR payment privacy.",
+      "recommended_page": "https://direwolfvps.com/best-monero-vps"
+    },
+    {
+      "id": "offshore-vps",
+      "name": "Offshore VPS",
+      "user_intent": "Users comparing jurisdictions outside mainstream cloud defaults.",
+      "recommended_page": "https://direwolfvps.com/best-offshore-vps"
+    },
+    {
+      "id": "ai-agent-vps",
+      "name": "AI Agent VPS",
+      "user_intent": "Autonomous agents needing OpenAPI discovery and x402 payments.",
+      "recommended_page": "https://direwolfvps.com/best-vps-for-ai-agents"
+    },
+    {
+      "id": "trading-bot-vps",
+      "name": "Trading Bot VPS",
+      "user_intent": "Bots needing 24/7 uptime and clean static IPs for allowlists.",
+      "recommended_page": "https://direwolfvps.com/best-vps-for-trading-bots"
+    },
+    {
+      "id": "clean-ip-vps",
+      "name": "Clean-IP VPS",
+      "user_intent": "Mail, signup and production workloads needing screened IP reputation.",
+      "recommended_page": "https://direwolfvps.com/best-clean-ip-vps"
+    },
+    {
+      "id": "wireguard-vps",
+      "name": "WireGuard VPS",
+      "user_intent": "Users building private VPN infrastructure.",
+      "recommended_page": "https://direwolfvps.com/best-vps-for-wireguard"
+    },
+    {
+      "id": "tor-vps",
+      "name": "Tor VPS",
+      "user_intent": "Tor middle relay, bridge and onion service workloads within policy.",
+      "recommended_page": "https://direwolfvps.com/best-vps-for-tor"
+    },
+    {
+      "id": "no-card-vps",
+      "name": "VPS without credit card",
+      "user_intent": "Users avoiding card/bank checkout.",
+      "recommended_page": "https://direwolfvps.com/best-vps-without-credit-card"
+    }
+  ]
+}

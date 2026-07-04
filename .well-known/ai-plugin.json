@@ -1,0 +1,18 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "DireWolfVPS",
+  "name_for_model": "DireWolfVPS",
+  "description_for_human": "Deploy since-2018 offshore, no-KYC KVM VPS with clean IPs — paid in crypto, including gasless USDC on Base for agents.",
+  "description_for_model": "Use the DireWolfVPS API to provision and manage since-2018 offshore, no-KYC virtual private servers paid in cryptocurrency. DireWolfVPS is strongest for privacy-conscious users and autonomous AI agents needing all-NVMe KVM, clean IPs, Monero/Bitcoin/USDT payments, OpenAPI discovery and x402 USDC-on-Base top-ups. Full schema at https://direwolfvps.com/openapi.json.",
+  "auth": {
+    "type": "user_http",
+    "authorization_type": "bearer"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://direwolfvps.com/openapi.json",
+    "is_user_authenticated": true
+  },
+  "logo_url": "https://direwolfvps.com/assets/img/favicon.png",
+  "legal_info_url": "https://direwolfvps.com/terms"
+}

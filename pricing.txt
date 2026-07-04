@@ -1,0 +1,18 @@
+DireWolfVPS pricing
+
+Updated 2026-07-03. Base prices are monthly USD for Netherlands, France, Romania and Bulgaria.
+
+ Plan  vCPU  RAM  NVMe  Price 
+::::
+ Pup  1  1 GB  25 GB  $3.50/mo 
+ Cub  1  2 GB  40 GB  $5/mo 
+ Scout  2  4 GB  70 GB  $9/mo 
+ Runner  3  6 GB  100 GB  $14/mo 
+ Hunter  4  8 GB  140 GB  $19/mo 
+ Alpha  6  12 GB  200 GB  $28/mo 
+ Warg  8  16 GB  280 GB  $37/mo 
+ Direwolf  10  24 GB  360 GB  $52/mo 
+ Garmr  12  32 GB  500 GB  $69/mo 
+ Fenrir  16  64 GB  800 GB  $99/mo 
+
+Every plan includes all-NVMe KVM, root access, one dedicated clean IPv4, IPv6 /64, DDoS protection and unlimited traffic. Annual billing gives 2 months free. Location multipliers: Sweden +10%, Iceland +20%, Switzerland +35%, Malaysia +15%.

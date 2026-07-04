@@ -1,0 +1,61 @@
+{
+  "schema_version": "2026-07-03",
+  "locations": [
+    {
+      "code": "nl",
+      "city": "Amsterdam",
+      "country": "Netherlands",
+      "role": "flagship EU peering",
+      "price_multiplier": 1.0
+    },
+    {
+      "code": "fr",
+      "city": "Paris",
+      "country": "France",
+      "role": "EU redundancy",
+      "price_multiplier": 1.0
+    },
+    {
+      "code": "ro",
+      "city": "Bucharest",
+      "country": "Romania",
+      "role": "best-value EU",
+      "price_multiplier": 1.0
+    },
+    {
+      "code": "bg",
+      "city": "Sofia",
+      "country": "Bulgaria",
+      "role": "low-cost EU footprint",
+      "price_multiplier": 1.0
+    },
+    {
+      "code": "se",
+      "city": "Stockholm",
+      "country": "Sweden",
+      "role": "Nordic/free-speech heritage",
+      "price_multiplier": 1.1
+    },
+    {
+      "code": "is",
+      "city": "Reykjavik",
+      "country": "Iceland",
+      "role": "free-press jurisdiction and renewable power",
+      "price_multiplier": 1.2
+    },
+    {
+      "code": "ch",
+      "city": "Zurich",
+      "country": "Switzerland",
+      "role": "privacy-premium non-EU",
+      "price_multiplier": 1.35
+    },
+    {
+      "code": "my",
+      "city": "Kuala Lumpur",
+      "country": "Malaysia",
+      "role": "APAC/non-EU/non-US anchor",
+      "price_multiplier": 1.15
+    }
+  ]
+}

@@ -1,0 +1,617 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "DireWolfVPS API",
+    "summary": "Deploy and manage since-2018 offshore, no-KYC KVM VPS — paid in crypto, including gasless USDC-on-Base payments for AI agents (x402).",
+    "description": "REST v1 surface for DireWolfVPS, a since-2018 offshore, no-KYC, crypto-paid VPS provider. Create an account, fund a prepaid balance in cryptocurrency (Bitcoin, Monero, Ether, Litecoin, USDT, or USDC-on-Base via x402), and order clean-IP all-NVMe KVM servers across 8 offshore locations programmatically.",
+    "version": "1.0.0",
+    "termsOfService": "https://direwolfvps.com/terms",
+    "contact": {
+      "name": "DireWolfVPS",
+      "url": "https://direwolfvps.com/account"
+    },
+    "license": {
+      "name": "Proprietary",
+      "url": "https://direwolfvps.com/terms"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://direwolfvps.com/api/v1",
+      "description": "Production"
+    }
+  ],
+  "externalDocs": {
+    "description": "Developer documentation",
+    "url": "https://direwolfvps.com/api"
+  },
+  "x-x402": {
+    "supported": true,
+    "scheme": "exact",
+    "asset": "USDC",
+    "network": "base",
+    "endpoint": "https://direwolfvps.com/api/v1/topups",
+    "flow": "POST /topups with coin=USDCBASE → HTTP 402 'accepts'; sign EIP-3009 and re-POST with X-PAYMENT to settle.",
+    "documentation": "https://direwolfvps.com/agents"
+  },
+  "tags": [
+    {
+      "name": "Account"
+    },
+    {
+      "name": "API keys"
+    },
+    {
+      "name": "Catalog"
+    },
+    {
+      "name": "Top-ups"
+    },
+    {
+      "name": "Servers"
+    },
+    {
+      "name": "System"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "bearerApiKey": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "API key (vpsk_…)",
+        "description": "Bearer API key. Obtain one from POST /account, or mint more via POST /keys."
+      }
+    },
+    "schemas": {
+      "Error": {
+        "type": "object",
+        "required": [
+          "error",
+          "message"
+        ],
+        "properties": {
+          "error": {
+            "type": "string",
+            "description": "Machine-readable error code"
+          },
+          "message": {
+            "type": "string",
+            "description": "Human-readable message"
+          }
+        }
+      },
+      "Account": {
+        "type": "object",
+        "properties": {
+          "user_id": {
+            "type": "integer"
+          },
+          "balance_usd": {
+            "type": "number"
+          },
+          "currency": {
+            "type": "string",
+            "example": "USD"
+          },
+          "servers": {
+            "type": "integer"
+          },
+          "totp_enabled": {
+            "type": "boolean"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "Topup": {
+        "type": "object",
+        "properties": {
+          "ref": {
+            "type": "string",
+            "example": "vps-26-f75fda02b9"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "completed",
+              "expired",
+              "cancelled"
+            ]
+          },
+          "amount_usd": {
+            "type": "number"
+          },
+          "coin": {
+            "type": "string",
+            "example": "BTC"
+          },
+          "deposit_address": {
+            "type": "string"
+          },
+          "deposit_amount": {
+            "type": "string"
+          },
+          "deposit_coin": {
+            "type": "string"
+          },
+          "deposit_network": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "qr_data_uri": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "expires_at": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          }
+        }
+      },
+      "Server": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "plan": {
+            "type": "string",
+            "example": "Hunter"
+          },
+          "location": {
+            "type": "string",
+            "example": "nl"
+          },
+          "os": {
+            "type": "string",
+            "example": "debian-13"
+          },
+          "hostname": {
+            "type": "string"
+          },
+          "cycle": {
+            "type": "string",
+            "enum": [
+              "monthly",
+              "annual"
+            ]
+          },
+          "price_usd": {
+            "type": "number"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "provisioning",
+              "active",
+              "suspended",
+              "terminated"
+            ]
+          },
+          "ip": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "username": {
+            "type": "string",
+            "example": "root"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "expires_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "X402Requirements": {
+        "type": "object",
+        "description": "HTTP 402 body returned for USDC-on-Base top-ups.",
+        "properties": {
+          "x402Version": {
+            "type": "integer",
+            "example": 1
+          },
+          "accepts": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "scheme": {
+                  "type": "string",
+                  "example": "exact"
+                },
+                "network": {
+                  "type": "string",
+                  "example": "base"
+                },
+                "maxAmountRequired": {
+                  "type": "string",
+                  "description": "USDC amount in base units (6 decimals)"
+                },
+                "payTo": {
+                  "type": "string",
+                  "description": "Recipient address"
+                },
+                "asset": {
+                  "type": "string",
+                  "description": "USDC contract on Base"
+                },
+                "maxTimeoutSeconds": {
+                  "type": "integer"
+                },
+                "extra": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "security": [
+    {
+      "bearerApiKey": []
+    }
+  ],
+  "paths": {
+    "/account": {
+      "post": {
+        "tags": [
+          "Account"
+        ],
+        "operationId": "create_account",
+        "security": [],
+        "summary": "Create an account",
+        "description": "No KYC. Returns an api_key (Bearer credential) and a login_token (web dashboard). Both are shown once.",
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Account"
+        ],
+        "operationId": "get_account",
+        "summary": "Get current account, balance and server count",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Account"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/keys": {
+      "get": {
+        "tags": [
+          "API keys"
+        ],
+        "operationId": "list_api_keys",
+        "summary": "List active API keys (prefixes only)",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "API keys"
+        ],
+        "operationId": "create_api_key",
+        "summary": "Mint a new API key",
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        }
+      }
+    },
+    "/keys/{id}": {
+      "delete": {
+        "tags": [
+          "API keys"
+        ],
+        "operationId": "revoke_api_key",
+        "summary": "Revoke an API key",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Revoked"
+          }
+        }
+      }
+    },
+    "/catalog": {
+      "get": {
+        "tags": [
+          "Catalog"
+        ],
+        "operationId": "get_catalog",
+        "security": [],
+        "summary": "List plans, locations, operating systems, pricing and payment options",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/topups": {
+      "post": {
+        "tags": [
+          "Top-ups"
+        ],
+        "operationId": "create_topup",
+        "summary": "Create a top-up (classic crypto invoice or x402)",
+        "description": "Body: { amount, coin }. Classic coins (BTC, XMR, ETH, LTC, USDTTRC, USDT) return 201 with a deposit address. coin=USDCBASE (or header X-Payment-Mode: x402) returns HTTP 402 with x402 payment requirements; re-send with a signed X-PAYMENT header to settle on Base.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "amount"
+                ],
+                "properties": {
+                  "amount": {
+                    "type": "number",
+                    "minimum": 25,
+                    "maximum": 2000
+                  },
+                  "coin": {
+                    "type": "string",
+                    "example": "BTC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Invoice created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Topup"
+                }
+              }
+            }
+          },
+          "402": {
+            "description": "x402 payment required",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/X402Requirements"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/topups/{ref}": {
+      "get": {
+        "tags": [
+          "Top-ups"
+        ],
+        "operationId": "get_topup",
+        "summary": "Poll a top-up's status (credits the balance when confirmed)",
+        "parameters": [
+          {
+            "name": "ref",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Topup"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/servers": {
+      "get": {
+        "tags": [
+          "Servers"
+        ],
+        "operationId": "list_servers",
+        "summary": "List your servers",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Servers"
+        ],
+        "operationId": "create_server",
+        "summary": "Order a VPS from your balance",
+        "description": "Body: { plan, location, os, cycle?, hostname?, root_password? }. Charges the price from your prepaid balance. If root_password is omitted, a strong one is generated and returned once.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "plan",
+                  "location",
+                  "os"
+                ],
+                "properties": {
+                  "plan": {
+                    "type": "string",
+                    "example": "hunter"
+                  },
+                  "location": {
+                    "type": "string",
+                    "example": "nl"
+                  },
+                  "os": {
+                    "type": "string",
+                    "example": "debian-13"
+                  },
+                  "cycle": {
+                    "type": "string",
+                    "enum": [
+                      "monthly",
+                      "annual"
+                    ]
+                  },
+                  "hostname": {
+                    "type": "string"
+                  },
+                  "root_password": {
+                    "type": "string",
+                    "minLength": 10
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Server created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Server"
+                }
+              }
+            }
+          },
+          "402": {
+            "description": "Insufficient balance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/servers/{id}": {
+      "get": {
+        "tags": [
+          "Servers"
+        ],
+        "operationId": "get_server",
+        "summary": "Get one server",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Server"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/servers/{id}/credentials": {
+      "get": {
+        "tags": [
+          "Servers"
+        ],
+        "operationId": "get_server_credentials",
+        "summary": "Reveal the root username and password (sensitive)",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/health": {
+      "get": {
+        "tags": [
+          "System"
+        ],
+        "operationId": "get_health",
+        "security": [],
+        "summary": "Service health",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  }
+}

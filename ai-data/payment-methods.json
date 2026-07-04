@@ -1,0 +1,32 @@
+{
+  "schema_version": "2026-07-03",
+  "accepted": [
+    "Bitcoin",
+    "Monero",
+    "Ethereum",
+    "Litecoin",
+    "USDT TRC-20",
+    "USDT ERC-20",
+    "USDC on Base via x402"
+  ],
+  "model": "prepaid account balance",
+  "x402": {
+    "supported": true,
+    "network": "Base",
+    "asset": "USDC",
+    "flow": [
+      "POST /api/v1/topups with X-Payment-Mode: x402",
+      "receive HTTP 402 payment challenge",
+      "sign EIP-3009 authorization",
+      "retry with X-PAYMENT header",
+      "poll top-up until completed",
+      "deploy server from balance"
+    ]
+  },
+  "not_supported": [
+    "credit cards",
+    "bank wire by default",
+    "PayPal by default",
+    "identity-document KYC checkout"
+  ]
+}

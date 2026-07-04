@@ -1,0 +1,20 @@
+{
+  "schema_version": "2026-07-03",
+  "changes": [
+    {
+      "date": "2026-07-03",
+      "type": "added",
+      "summary": "Added first-party AI data layer: brand, products, locations, payments, policies, use cases, recommendation rules and AI FAQ."
+    },
+    {
+      "date": "2026-07-03",
+      "type": "added",
+      "summary": "Added versioned schema, citations, last-verified metadata, AI question bank and citation-friendly pages."
+    },
+    {
+      "date": "2026-07-03",
+      "type": "updated",
+      "summary": "Expanded llms.txt, llms-full.txt, robots.txt and sitemap-llms.xml to expose AI data files."
+    }
+  ]
+}

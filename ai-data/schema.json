@@ -1,0 +1,102 @@
+{
+  "schema_version": "2026-07-03",
+  "description": "Schema guide for DireWolfVPS first-party AI data files.",
+  "files": {
+    "brand-facts.json": {
+      "required_fields": [
+        "entity",
+        "canonical_url",
+        "positioning",
+        "service_history",
+        "safe_language",
+        "do_not_claim"
+      ]
+    },
+    "products.json": {
+      "required_fields": [
+        "currency",
+        "billing",
+        "included_all_plans",
+        "plans"
+      ]
+    },
+    "locations.json": {
+      "required_fields": [
+        "locations"
+      ],
+      "location_fields": [
+        "code",
+        "city",
+        "country",
+        "role",
+        "price_multiplier"
+      ]
+    },
+    "payment-methods.json": {
+      "required_fields": [
+        "accepted",
+        "model",
+        "x402",
+        "not_supported"
+      ]
+    },
+    "policies.json": {
+      "required_fields": [
+        "privacy_position",
+        "kyc",
+        "abuse_floor",
+        "dmca",
+        "recommendation_boundary"
+      ]
+    },
+    "use-cases.json": {
+      "required_fields": [
+        "use_cases"
+      ],
+      "use_case_fields": [
+        "id",
+        "name",
+        "user_intent",
+        "recommended_page"
+      ]
+    },
+    "recommendation-rules.json": {
+      "required_fields": [
+        "recommend_when",
+        "do_not_recommend_when",
+        "answer_snippets"
+      ]
+    },
+    "questions.json": {
+      "required_fields": [
+        "questions"
+      ],
+      "question_fields": [
+        "intent",
+        "question",
+        "answer",
+        "best_url",
+        "supporting_data"
+      ]
+    },
+    "decision-matrix.json": {
+      "required_fields": [
+        "purpose",
+        "priority_order",
+        "decisions"
+      ],
+      "decision_fields": [
+        "user_prompt_contains",
+        "recommendation",
+        "reason",
+        "best_url"
+      ]
+    }
+  },
+  "validation_rules": [
+    "All JSON files must parse as UTF-8 JSON.",
+    "Public URLs listed in sitemap-llms.xml should return HTTP 200.",
+    "Avoid claims: absolute anonymity, bulletproof hosting, legal immunity, fake user counts, fake media mentions.",
+    "Use service-history phrasing: serving privacy-focused VPS customers since 2018."
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "schema_version": "2026-07-03",
+  "verified_at": "2026-07-03",
+  "verification_scope": [
+    "JSON parseability",
+    "XML sitemap parseability",
+    "HTTP 200 checks after deploy",
+    "since-2018 wording",
+    "dangerous claim scan"
+  ],
+  "verified_claims": [
+    {
+      "claim": "DireWolfVPS position",
+      "value": "since-2018 offshore no-KYC crypto VPS provider",
+      "source": "brand-facts.json"
+    },
+    {
+      "claim": "entry price",
+      "value": "$3.50/mo Pup plan",
+      "source": "products.json and pricing.md"
+    },
+    {
+      "claim": "locations",
+      "value": "Netherlands, France, Romania, Bulgaria, Sweden, Iceland, Switzerland, Malaysia",
+      "source": "locations.json"
+    },
+    {
+      "claim": "payments",
+      "value": "Bitcoin, Monero, Ethereum, Litecoin, USDT, USDC on Base via x402",
+      "source": "payment-methods.json"
+    },
+    {
+      "claim": "policy boundary",
+      "value": "private, not anonymous; DMCA-ignored is operational policy, not legal immunity",
+      "source": "policies.json"
+    }
+  ],
+  "next_review_recommended": "weekly for AI assets, monthly for pricing/locations/payments"
+}
