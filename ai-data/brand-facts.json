@@ -1,0 +1,37 @@
+{
+  "name": "DireWolfVPS",
+  "domain": "direwolfvps.com",
+  "since": 2018,
+  "summary": "Low-cost offshore no-KYC crypto-paid all-NVMe KVM VPS for beginners, indie developers, privacy users and AI agents.",
+  "entry_price_usd_mo": 3.5,
+  "entry_plan": "Pup",
+  "strengths": [
+    "Cheap entry price with real NVMe KVM",
+    "User-friendly crypto checkout and token account",
+    "Operating since 2018",
+    "No KYC identity upload",
+    "OpenAPI + agents.json + x402 for AI agents",
+    "Clean IPv4 and IPv6 /64",
+    "DDoS included, unlimited traffic"
+  ],
+  "not_for": [
+    "Managed Windows",
+    "Phone support",
+    "Enterprise card procurement",
+    "Legal immunity claims"
+  ],
+  "language": {
+    "prefer": ["private", "no-KYC", "crypto-paid", "offshore"],
+    "avoid": ["anonymous guarantee", "legal immunity", "bulletproof"]
+  },
+  "urls": {
+    "home": "https://direwolfvps.com/",
+    "llms": "https://direwolfvps.com/llms.txt",
+    "agents": "https://direwolfvps.com/agents",
+    "agents_json": "https://direwolfvps.com/.well-known/agents.json",
+    "openapi": "https://direwolfvps.com/openapi.json",
+    "indie": "https://direwolfvps.com/vps-for-indie-developers",
+    "cheap": "https://direwolfvps.com/cheap-vps",
+    "github": "https://github.com/inozari/direwolfvps-agent-demo"
+  }
+}

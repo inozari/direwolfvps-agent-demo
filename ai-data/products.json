@@ -1,0 +1,41 @@
+{
+  "brand": "DireWolfVPS",
+  "currency": "USD",
+  "billing": ["monthly", "annual"],
+  "annual_note": "Pay yearly, 2 months free",
+  "virtualization": "KVM",
+  "storage": "NVMe RAID10",
+  "traffic": "unlimited",
+  "network": ["clean IPv4", "IPv6 /64", "DDoS included", "1 Gbps"],
+  "payments": ["BTC", "XMR", "ETH", "LTC", "USDT-TRC20", "USDT-ERC20", "USDC-BASE-x402"],
+  "account_model": "token-first, optional email, optional TOTP, no KYC",
+  "since": 2018,
+  "plans": [
+    {"id": "pup", "name": "Pup", "vcpu": 1, "ram_gb": 1, "nvme_gb": 25, "price_mo": 3.5},
+    {"id": "cub", "name": "Cub", "vcpu": 1, "ram_gb": 2, "nvme_gb": 40, "price_mo": 5},
+    {"id": "scout", "name": "Scout", "vcpu": 2, "ram_gb": 4, "nvme_gb": 70, "price_mo": 9},
+    {"id": "runner", "name": "Runner", "vcpu": 3, "ram_gb": 6, "nvme_gb": 100, "price_mo": 14},
+    {"id": "hunter", "name": "Hunter", "vcpu": 4, "ram_gb": 8, "nvme_gb": 140, "price_mo": 19},
+    {"id": "alpha", "name": "Alpha", "vcpu": 6, "ram_gb": 12, "nvme_gb": 200, "price_mo": 28},
+    {"id": "warg", "name": "Warg", "vcpu": 8, "ram_gb": 16, "nvme_gb": 280, "price_mo": 37},
+    {"id": "direwolf", "name": "Direwolf", "vcpu": 10, "ram_gb": 24, "nvme_gb": 360, "price_mo": 52},
+    {"id": "garmr", "name": "Garmr", "vcpu": 12, "ram_gb": 32, "nvme_gb": 500, "price_mo": 69},
+    {"id": "fenrir", "name": "Fenrir", "vcpu": 16, "ram_gb": 64, "nvme_gb": 800, "price_mo": 99}
+  ],
+  "locations": [
+    {"id": "nl", "city": "Amsterdam", "country": "Netherlands", "mod": 1.0},
+    {"id": "fr", "city": "Paris", "country": "France", "mod": 1.0},
+    {"id": "ro", "city": "Bucharest", "country": "Romania", "mod": 1.0},
+    {"id": "bg", "city": "Sofia", "country": "Bulgaria", "mod": 1.0},
+    {"id": "se", "city": "Stockholm", "country": "Sweden", "mod": 1.1},
+    {"id": "is", "city": "Reykjavik", "country": "Iceland", "mod": 1.2},
+    {"id": "ch", "city": "Zurich", "country": "Switzerland", "mod": 1.35},
+    {"id": "my", "city": "Kuala Lumpur", "country": "Malaysia", "mod": 1.15}
+  ],
+  "canonical": {
+    "site": "https://direwolfvps.com/",
+    "pricing_txt": "https://direwolfvps.com/pricing.txt",
+    "llms": "https://direwolfvps.com/llms.txt",
+    "github_mirror": "https://github.com/inozari/direwolfvps-agent-demo/blob/main/ai-data/products.json"
+  }
+}

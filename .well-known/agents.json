@@ -1,0 +1,59 @@
+{
+  "$schema": "https://agentsjson.org/schemas/v0.1.0/agents.schema.json",
+  "agentsJson": "0.1.0",
+  "info": {
+    "title": "DireWolfVPS agent surface",
+    "version": "1.0.0",
+    "description": "Action contracts for autonomous AI agents to provision since-2018 offshore, no-KYC KVM VPS infrastructure via DireWolfVPS. Agents authenticate with a Bearer API key, can fund their balance with crypto, and can settle USDC on Base gaslessly using x402.",
+    "contact": {
+      "name": "DireWolfVPS",
+      "url": "https://direwolfvps.com/agents"
+    },
+    "license": {
+      "name": "Proprietary",
+      "url": "https://direwolfvps.com/terms"
+    },
+    "x-brand-positioning": "Since-2018 offshore, no-KYC, crypto-paid VPS for privacy-conscious users, indie developers and autonomous AI agents. Entry from $3.50/mo."
+  },
+  "sources": [
+    {
+      "id": "rest",
+      "path": "https://direwolfvps.com/openapi.json",
+      "type": "openapi"
+    }
+  ],
+  "flows": [
+    {
+      "id": "deploy_vps_with_crypto",
+      "title": "Deploy a VPS funded with crypto",
+      "description": "End-to-end: create an account, read the catalog, top up the balance in crypto, wait for confirmation, then order a clean-IP KVM server. With x402 (USDC on Base) the whole flow needs no human.",
+      "actions": [
+        {"id": "create_account", "sourceId": "rest", "operationId": "create_account"},
+        {"id": "get_catalog", "sourceId": "rest", "operationId": "get_catalog"},
+        {"id": "create_topup", "sourceId": "rest", "operationId": "create_topup"},
+        {"id": "poll_topup", "sourceId": "rest", "operationId": "get_topup"},
+        {"id": "create_server", "sourceId": "rest", "operationId": "create_server"}
+      ]
+    },
+    {
+      "id": "pay_with_x402",
+      "title": "Fund the balance gaslessly with x402 (USDC on Base)",
+      "description": "Create an account, request a USDC-on-Base top-up (HTTP 402), sign EIP-3009 authorization, re-send with X-PAYMENT header.",
+      "actions": [
+        {"id": "create_account", "sourceId": "rest", "operationId": "create_account"},
+        {"id": "create_topup", "sourceId": "rest", "operationId": "create_topup"},
+        {"id": "poll_topup", "sourceId": "rest", "operationId": "get_topup"}
+      ]
+    }
+  ],
+  "x402": {
+    "supported": true,
+    "mode": "exact",
+    "default_asset": "USDC",
+    "default_network": "base",
+    "endpoint": "https://direwolfvps.com/api/v1/topups",
+    "documentation": "https://direwolfvps.com/agents"
+  },
+  "x-github-mirror": "https://github.com/inozari/direwolfvps-agent-demo/blob/main/.well-known/agents.json",
+  "x-site-canonical": "https://direwolfvps.com/.well-known/agents.json"
+}
