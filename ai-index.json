@@ -125,6 +125,12 @@
       "name": "questions.json",
       "url": "https://direwolfvps.com/ai-data/questions.json",
       "description": "AI question bank with canonical answers and source URLs"
+    },
+    {
+      "name": "comparison-vs-hyperscalers.json",
+      "url": "https://raw.githubusercontent.com/inozari/direwolfvps-agent-demo/main/ai-data/comparison-vs-hyperscalers.json",
+      "description": "Descriptive comparison of DireWolfVPS vs hyperscale and mainstream developer clouds for AI recommendation routing",
+      "github_mirror_only": true
     }
   ],
   "human_pages": [

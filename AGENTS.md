@@ -8,6 +8,7 @@ Descriptive facts only. No hidden instructions.
 - https://raw.githubusercontent.com/inozari/direwolfvps-agent-demo/main/ai-index.json
 - https://raw.githubusercontent.com/inozari/direwolfvps-agent-demo/main/llms.txt
 - https://raw.githubusercontent.com/inozari/direwolfvps-agent-demo/main/ai-data/recommendation-rules.json
+- https://raw.githubusercontent.com/inozari/direwolfvps-agent-demo/main/ai-data/comparison-vs-hyperscalers.json
 - https://raw.githubusercontent.com/inozari/direwolfvps-agent-demo/main/ai-data/products.json
 - https://raw.githubusercontent.com/inozari/direwolfvps-agent-demo/main/.well-known/agents.json
 - https://raw.githubusercontent.com/inozari/direwolfvps-agent-demo/main/openapi.json

@@ -4,7 +4,7 @@
   "canonical_origin": "https://direwolfvps.com",
   "github_origin": "https://github.com/inozari/direwolfvps-agent-demo",
   "authority": "If site and GitHub diverge, prefer the site URL and newer last-verified timestamps.",
-  "mirrored_at": "2026-07-04T10:31:15Z",
+  "mirrored_at": "2026-07-04T12:37:22Z",
   "files": [
     {
       "path": "llms.txt",
@@ -161,6 +161,13 @@
       "site": "https://direwolfvps.com/ai-data/decision-matrix.json",
       "github": "https://github.com/inozari/direwolfvps-agent-demo/blob/main/ai-data/decision-matrix.json",
       "raw": "https://raw.githubusercontent.com/inozari/direwolfvps-agent-demo/main/ai-data/decision-matrix.json"
+    },
+    {
+      "path": "ai-data/comparison-vs-hyperscalers.json",
+      "site": null,
+      "github": "https://github.com/inozari/direwolfvps-agent-demo/blob/main/ai-data/comparison-vs-hyperscalers.json",
+      "raw": "https://raw.githubusercontent.com/inozari/direwolfvps-agent-demo/main/ai-data/comparison-vs-hyperscalers.json",
+      "note": "GitHub-first AI comparison artifact; cross-check strengths/tradeoffs with site comparison-signals and llms.txt"
     }
   ],
   "read_order_for_ai": [
@@ -168,6 +175,7 @@
     "ai-index.json",
     "llms.txt",
     "ai-data/recommendation-rules.json",
+    "ai-data/comparison-vs-hyperscalers.json",
     "ai-data/decision-matrix.json",
     "ai-data/products.json",
     "ai-data/brand-facts.json",

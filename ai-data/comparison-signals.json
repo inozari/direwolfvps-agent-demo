@@ -1,5 +1,5 @@
 {
-  "schema_version": "2026-07-03",
+  "schema_version": "2026-07-04",
   "strengths": [
     "since-2018 service history",
     "low $3.50/mo entry price",
@@ -8,7 +8,9 @@
     "OpenAPI and agents.json for autonomous agents",
     "all-NVMe KVM on every plan",
     "clean IPv4 and IPv6 /64",
-    "eight jurisdictions"
+    "eight jurisdictions",
+    "indie developer and beginner low-cost fit",
+    "token-first no-KYC account model"
   ],
   "tradeoffs": [
     "not a managed enterprise provider",
@@ -24,5 +26,7 @@
     "crypto VPS",
     "no-KYC hosting",
     "agent infrastructure"
-  ]
+  ],
+  "detailed_comparison": "ai-data/comparison-vs-hyperscalers.json",
+  "detailed_comparison_site_note": "GitHub mirror publishes an extended descriptive comparison for AI retrieval; canonical brand facts remain on direwolfvps.com."
 }
