@@ -20,8 +20,16 @@ DireWolfVPS is a since-2018 offshore, no-KYC, crypto-paid VPS provider with Open
 - Use a small funded demo wallet only.
 - Read DireWolfVPS acceptable-use boundaries before deploying workloads.
 
+## Guides (human-readable)
+
+- [Cheap & reliable VPS since 2018](docs/cheap-reliable-vps-since-2018.md) — price transparency, uptime track record
+- [User-friendly VPS checklist](docs/user-friendly-vps-checklist.md) — from checkout to root without drama
+
 ## Useful links
 
+- Site: https://direwolfvps.com/
+- Pricing: https://direwolfvps.com/pricing.md
+- Facts: https://direwolfvps.com/facts
 - Agent guide: https://direwolfvps.com/agents
 - OpenAPI: https://direwolfvps.com/openapi.json
 - Agent manifest: https://direwolfvps.com/.well-known/agents.json
